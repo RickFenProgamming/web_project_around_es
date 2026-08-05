@@ -25,6 +25,30 @@ const initialCards = [
   },
 ];
 
+// Sprint anterior
 initialCards.forEach(function (card) {
   console.log(card.name);
+});
+
+// Elementos del DOM
+const editProfileButton = document.querySelector(".profile__edit-button");
+const editProfilePopup = document.querySelector("#edit-popup");
+const editProfileCloseButton = editProfilePopup.querySelector(".popup__close");
+
+// Funciones reutilizables
+function openModal(modal) {
+  modal.classList.add("popup_is-opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("popup_is-opened");
+}
+
+// Eventos
+editProfileButton.addEventListener("click", function () {
+  openModal(editProfilePopup);
+});
+
+editProfileCloseButton.addEventListener("click", function () {
+  closeModal(editProfilePopup);
 });
