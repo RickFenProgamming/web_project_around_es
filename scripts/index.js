@@ -35,6 +35,17 @@ const editProfileButton = document.querySelector(".profile__edit-button");
 const editProfilePopup = document.querySelector("#edit-popup");
 const editProfileCloseButton = editProfilePopup.querySelector(".popup__close");
 
+// Elementos del perfil
+const profileTitle = document.querySelector(".profile__title");
+const profileDescription = document.querySelector(".profile__description");
+
+// Campos del formulario
+const profileForm = document.querySelector("#edit-profile-form");
+const nameInput = profileForm.querySelector(".popup__input_type_name");
+const descriptionInput = profileForm.querySelector(
+  ".popup__input_type_description",
+);
+
 // Funciones reutilizables
 function openModal(modal) {
   modal.classList.add("popup_is-opened");
@@ -44,10 +55,20 @@ function closeModal(modal) {
   modal.classList.remove("popup_is-opened");
 }
 
-// Eventos
-editProfileButton.addEventListener("click", function () {
+// Rellenar el formulario con los datos actuales
+function fillProfileForm() {
+  nameInput.value = profileTitle.textContent;
+  descriptionInput.value = profileDescription.textContent;
+}
+
+// Abrir modal de edición
+function handleOpenEditModal() {
+  fillProfileForm();
   openModal(editProfilePopup);
-});
+}
+
+// Eventos
+editProfileButton.addEventListener("click", handleOpenEditModal);
 
 editProfileCloseButton.addEventListener("click", function () {
   closeModal(editProfilePopup);
