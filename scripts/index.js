@@ -52,6 +52,10 @@ const profileTitle = document.querySelector(".profile__title");
 
 const profileDescription = document.querySelector(".profile__description");
 
+const cardsList = document.querySelector(".cards__list");
+
+const cardTemplate = document.querySelector("#card-template").content;
+
 // =======================
 // Funciones reutilizables
 // =======================
@@ -98,3 +102,19 @@ editProfileCloseButton.addEventListener("click", function () {
 });
 
 profileForm.addEventListener("submit", handleProfileFormSubmit);
+
+function getCardElement({
+  name = "Sin título",
+  link = "./images/placeholder.jpg",
+}) {
+  const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
+
+  const cardImage = cardElement.querySelector(".card__image");
+  const cardTitle = cardElement.querySelector(".card__title");
+
+  cardTitle.textContent = name;
+  cardImage.src = link;
+  cardImage.alt = name;
+
+  return cardElement;
+}
