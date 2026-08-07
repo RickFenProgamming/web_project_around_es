@@ -155,6 +155,12 @@ function getCardElement({
   return cardElement;
 }
 
+const likeButton = cardElement.querySelector(".card__like-button");
+
+likeButton.addEventListener("click", function () {
+  likeButton.classList.toggle("card__like-button_liked");
+});
+
 function renderCard(name, link, container) {
   const card = getCardElement({ name, link });
 
