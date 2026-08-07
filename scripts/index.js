@@ -66,6 +66,8 @@ const newCardPopup = document.querySelector("#new-card-popup");
 
 const newCardCloseButton = newCardPopup.querySelector(".popup__close");
 
+const newCardCloseButton = newCardPopup.querySelector(".popup__close");
+
 const newCardForm = document.querySelector("#new-card-form");
 
 const cardNameInput = newCardForm.querySelector(".popup__input_type_card-name");
