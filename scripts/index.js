@@ -25,9 +25,8 @@ const initialCards = [
   },
 ];
 
-// Sprint anterior
 initialCards.forEach(function (card) {
-  renderCard(card.name, card.link, cardsList);
+  renderCard(card, cardsList);
 });
 
 // =======================
@@ -177,9 +176,8 @@ function getCardElement({
   return cardElement;
 }
 
-function renderCard(name, link, container) {
-  const card = getCardElement({ name, link });
-
+function renderCard(cardData, container) {
+  const card = getCardElement(cardData);
   container.prepend(card);
 }
 
