@@ -86,6 +86,14 @@ const cardLinkInput = newCardForm.querySelector(".popup__input_type_url");
 
 const deleteButton = cardElement.querySelector(".card__delete-button");
 
+const imagePopup = document.querySelector("#image-popup");
+
+const imagePopupCloseButton = imagePopup.querySelector(".popup__close");
+
+const popupImage = imagePopup.querySelector(".popup__image");
+
+const popupCaption = imagePopup.querySelector(".popup__caption");
+
 // =========================
 // Nuevos elementos del DOM
 // =========================
@@ -164,6 +172,18 @@ likeButton.addEventListener("click", function () {
 
 deleteButton.addEventListener("click", function () {
   cardElement.remove();
+});
+
+cardImage.addEventListener("click", function () {
+  popupImage.src = data.link;
+  popupImage.alt = data.name;
+  popupCaption.textContent = data.name;
+
+  openModal(imagePopup);
+});
+
+imagePopupCloseButton.addEventListener("click", function () {
+  closeModal(imagePopup);
 });
 
 function renderCard(name, link, container) {
