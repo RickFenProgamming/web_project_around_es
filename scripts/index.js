@@ -118,3 +118,9 @@ function getCardElement({
 
   return cardElement;
 }
+
+function renderCard(name, link, container) {
+  const card = getCardElement({ name, link });
+
+  container.prepend(card);
+}
