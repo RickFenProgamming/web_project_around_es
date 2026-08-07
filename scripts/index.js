@@ -123,6 +123,10 @@ profileForm.addEventListener("submit", handleProfileFormSubmit);
 
 addCardButton.addEventListener("click", handleOpenNewCardModal);
 
+newCardCloseButton.addEventListener("click", function () {
+  closeModal(newCardPopup);
+});
+
 function getCardElement({
   name = "Sin título",
   link = "./images/placeholder.jpg",
