@@ -80,6 +80,10 @@ const cardNameInput = newCardForm.querySelector(".popup__input_type_card-name");
 
 const cardLinkInput = newCardForm.querySelector(".popup__input_type_url");
 
+const cardNameInput = newCardForm.querySelector(".popup__input_type_card-name");
+
+const cardLinkInput = newCardForm.querySelector(".popup__input_type_url");
+
 // =========================
 // Nuevos elementos del DOM
 // =========================
@@ -133,6 +137,8 @@ newCardCloseButton.addEventListener("click", function () {
   closeModal(newCardPopup);
 });
 
+newCardForm.addEventListener("submit", handleCardFormSubmit);
+
 function getCardElement({
   name = "Sin título",
   link = "./images/placeholder.jpg",
@@ -157,4 +163,19 @@ function renderCard(name, link, container) {
 
 function handleOpenNewCardModal() {
   openModal(newCardPopup);
+}
+
+function handleCardFormSubmit(evt) {
+  evt.preventDefault();
+
+  const newCard = {
+    name: cardNameInput.value,
+    link: cardLinkInput.value,
+  };
+
+  renderCard(newCard, cardsList);
+
+  closeModal(newCardPopup);
+
+  newCardForm.reset();
 }
