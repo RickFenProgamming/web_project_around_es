@@ -84,6 +84,8 @@ const cardNameInput = newCardForm.querySelector(".popup__input_type_card-name");
 
 const cardLinkInput = newCardForm.querySelector(".popup__input_type_url");
 
+const deleteButton = cardElement.querySelector(".card__delete-button");
+
 // =========================
 // Nuevos elementos del DOM
 // =========================
@@ -144,7 +146,6 @@ function getCardElement({
   link = "./images/placeholder.jpg",
 }) {
   const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
-
   const cardImage = cardElement.querySelector(".card__image");
   const cardTitle = cardElement.querySelector(".card__title");
 
@@ -159,6 +160,10 @@ const likeButton = cardElement.querySelector(".card__like-button");
 
 likeButton.addEventListener("click", function () {
   likeButton.classList.toggle("card__like-button_liked");
+});
+
+deleteButton.addEventListener("click", function () {
+  cardElement.remove();
 });
 
 function renderCard(name, link, container) {
