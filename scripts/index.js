@@ -119,6 +119,8 @@ editProfileCloseButton.addEventListener("click", function () {
 
 profileForm.addEventListener("submit", handleProfileFormSubmit);
 
+addCardButton.addEventListener("click", handleOpenNewCardModal);
+
 function getCardElement({
   name = "Sin título",
   link = "./images/placeholder.jpg",
