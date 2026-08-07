@@ -25,10 +25,6 @@ const initialCards = [
   },
 ];
 
-initialCards.forEach(function (card) {
-  renderCard(card, cardsList);
-});
-
 // =======================
 // Elementos del DOM
 // =======================
@@ -197,3 +193,7 @@ function handleCardFormSubmit(evt) {
 
   newCardForm.reset();
 }
+
+initialCards.forEach(function (card) {
+  renderCard(card, cardsList);
+});
