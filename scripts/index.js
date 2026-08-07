@@ -74,6 +74,12 @@ const cardNameInput = newCardForm.querySelector(".popup__input_type_card-name");
 
 const cardUrlInput = newCardForm.querySelector(".popup__input_type_url");
 
+const newCardForm = document.querySelector("#new-card-form");
+
+const cardNameInput = newCardForm.querySelector(".popup__input_type_card-name");
+
+const cardLinkInput = newCardForm.querySelector(".popup__input_type_url");
+
 // =========================
 // Nuevos elementos del DOM
 // =========================
