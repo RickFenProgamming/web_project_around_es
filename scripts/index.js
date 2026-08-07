@@ -27,7 +27,7 @@ const initialCards = [
 
 // Sprint anterior
 initialCards.forEach(function (card) {
-  console.log(card.name);
+  renderCard(card.name, card.link, cardsList);
 });
 
 // =======================
