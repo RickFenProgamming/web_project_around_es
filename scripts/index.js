@@ -156,7 +156,7 @@ function getCardElement({
   cardImage.alt = name;
 
   likeButton.addEventListener("click", function () {
-    likeButton.classList.toggle("card__like-button_liked");
+    likeButton.classList.toggle("card__like-button_is-active");
   });
 
   deleteButton.addEventListener("click", function () {
