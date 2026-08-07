@@ -140,3 +140,7 @@ function renderCard(name, link, container) {
 
   container.prepend(card);
 }
+
+function handleOpenNewCardModal() {
+  openModal(newCardPopup);
+}
