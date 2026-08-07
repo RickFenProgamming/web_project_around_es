@@ -26,4 +26,4 @@ Around The U.S. es una página web interactiva donde los usuarios pueden editar 
 
 ## GitHub Pages
 
-Aquí se agregará el enlace al proyecto publicado en GitHub Pages.
+https://rickfenprogamming.github.io/web_project_around_es/
