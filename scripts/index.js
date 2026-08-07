@@ -66,25 +66,13 @@ const newCardPopup = document.querySelector("#new-card-popup");
 
 const newCardCloseButton = newCardPopup.querySelector(".popup__close");
 
-const newCardCloseButton = newCardPopup.querySelector(".popup__close");
-
 const newCardForm = document.querySelector("#new-card-form");
 
 const cardNameInput = newCardForm.querySelector(".popup__input_type_card-name");
 
 const cardUrlInput = newCardForm.querySelector(".popup__input_type_url");
 
-const newCardForm = document.querySelector("#new-card-form");
-
-const cardNameInput = newCardForm.querySelector(".popup__input_type_card-name");
-
 const cardLinkInput = newCardForm.querySelector(".popup__input_type_url");
-
-const cardNameInput = newCardForm.querySelector(".popup__input_type_card-name");
-
-const cardLinkInput = newCardForm.querySelector(".popup__input_type_url");
-
-const deleteButton = cardElement.querySelector(".card__delete-button");
 
 const imagePopup = document.querySelector("#image-popup");
 
