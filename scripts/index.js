@@ -60,6 +60,22 @@ const cardTemplate = document.querySelector("#card-template").content;
 // Funciones reutilizables
 // =======================
 
+const addCardButton = document.querySelector(".profile__add-button");
+
+const newCardPopup = document.querySelector("#new-card-popup");
+
+const newCardCloseButton = newCardPopup.querySelector(".popup__close");
+
+const newCardForm = document.querySelector("#new-card-form");
+
+const cardNameInput = newCardForm.querySelector(".popup__input_type_card-name");
+
+const cardUrlInput = newCardForm.querySelector(".popup__input_type_url");
+
+// =========================
+// Nuevos elementos del DOM
+// =========================
+
 function openModal(modal) {
   modal.classList.add("popup_is-opened");
 }
