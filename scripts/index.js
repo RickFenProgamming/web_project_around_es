@@ -134,6 +134,25 @@ imagePopupCloseButton.addEventListener("click", function () {
 
 newCardForm.addEventListener("submit", handleCardFormSubmit);
 
+function handleLikeButtonClick(evt) {
+  evt.currentTarget.classList.toggle("card__like-button_is-active");
+}
+
+function handleDeleteButtonClick(evt) {
+  const cardElement = evt.currentTarget.closest(".card");
+  cardElement.remove();
+}
+
+function handleCardImageClick(evt) {
+  const cardImage = evt.currentTarget;
+
+  popupImage.src = cardImage.src;
+  popupImage.alt = cardImage.alt;
+  popupCaption.textContent = cardImage.alt;
+
+  openModal(imagePopup);
+}
+
 function getCardElement({
   name = "Sin título",
   link = "./images/placeholder.jpg",
@@ -149,21 +168,9 @@ function getCardElement({
   cardImage.src = link;
   cardImage.alt = name;
 
-  likeButton.addEventListener("click", function () {
-    likeButton.classList.toggle("card__like-button_is-active");
-  });
-
-  deleteButton.addEventListener("click", function () {
-    cardElement.remove();
-  });
-
-  cardImage.addEventListener("click", function () {
-    popupImage.src = link;
-    popupImage.alt = name;
-    popupCaption.textContent = name;
-
-    openModal(imagePopup);
-  });
+  likeButton.addEventListener("click", handleLikeButtonClick);
+  deleteButton.addEventListener("click", handleDeleteButtonClick);
+  cardImage.addEventListener("click", handleCardImageClick);
 
   return cardElement;
 }
@@ -192,6 +199,6 @@ function handleCardFormSubmit(evt) {
   newCardForm.reset();
 }
 
-initialCards.forEach(function (card) {
+[...initialCards].reverse().forEach(function (card) {
   renderCard(card, cardsList);
 });
