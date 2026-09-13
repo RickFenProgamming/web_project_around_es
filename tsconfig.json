@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./public",
+    "target": "ES2017",
+    "module": "ES6",
+    "moduleResolution": "bundler",
+    "lib": ["ES2017", "DOM"],
+    "allowJs": true,
+    "strict": true,
+    "noEmitOnError": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"]
+}
